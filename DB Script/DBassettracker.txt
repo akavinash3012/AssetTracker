@@ -1,0 +1,46 @@
+CREATE DATABASE  `assettracker`;
+USE `assettracker`;
+
+--
+-- Table structure for table `assetlocation`
+--
+
+CREATE TABLE `assetlocation` (
+  `productID` varchar(100) NOT NULL,
+  `productName` varchar(100) NOT NULL,
+  `locationID` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `date` varchar(100) NOT NULL,
+  PRIMARY KEY (`productID`)
+) 
+
+--
+-- Table structure for table `assets`
+--
+CREATE TABLE `assets` (
+  `assets` varchar(100) NOT NULL,
+  `productName` varchar(100) NOT NULL,
+  `productID` varchar(30) NOT NULL,
+  `Organization` varchar(100) NOT NULL,
+  `price` float DEFAULT NULL,
+  PRIMARY KEY (`productID`)
+) 
+
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `RegID` int(11) NOT NULL AUTO_INCREMENT,
+  `UserName` varchar(100) NOT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `Auth` varchar(3) DEFAULT NULL,
+  `EmailAddress` varchar(100) DEFAULT NULL,
+  `Organization` varchar(100) DEFAULT NULL,
+  `ContactNumber` varchar(100) DEFAULT NULL,
+  `Approve` int(1) DEFAULT NULL,
+  PRIMARY KEY (`RegID`)
+
